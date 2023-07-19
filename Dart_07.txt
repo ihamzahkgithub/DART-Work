@@ -1,0 +1,169 @@
+
+                OOP CONCEPTS
+
+
+class Book
+{
+  late String title;
+  late String author;
+  late int pages;
+   late int price;
+
+   void bookinfo (){
+
+     print('Title  $title');
+     print('Author  $author');
+     print('Pages $pages');
+     print('Price  $price');
+   }
+
+
+}
+
+void main ()
+{
+  Book r;
+  r = Book();
+  r.author = 'Hamza ';
+  r.title = 'aKHWA DEKHWA';
+  r.pages = 200;
+  r.price = 1200;
+
+  r.bookinfo();
+
+}
+
+Modified
+class Contacts
+{
+
+  late String name;
+  late String number;
+  String? email;
+  String? address;
+
+  Contacts({
+             required this.name,
+             required this.number,
+             this.email,
+             this.address,
+           });
+
+  void hamza(){
+    print(name);
+    print(number);
+
+  }
+
+ }
+
+void main ()
+{
+
+  Contacts r =Contacts(name: 'hamza', number:'ad' );
+  r.hamza();
+}
+
+
+
+
+
+
+                   INHERITANCE
+
+
+class Address
+{
+  late String StreetNo;      // has a relationship
+  late String Country;
+}
+
+class Person
+{
+  late String name;
+  late String gender;
+  late String dob;
+}
+
+class Student extends Person
+{
+  late String classSection;
+  late String department;
+  late double gpa;
+  late Address address;  // has a relationshiop
+   MEANS WHEN YOU DECLARE THE OBJECT OF ONE CLASS IN ANOTHER CLASS
+}
+
+class Doctor extends Person
+{
+  late int fee;
+  late String location;
+
+}
+
+void main ()
+{
+  Doctor obj = Doctor();
+  obj.name= 'hamza';
+  obj.fee= 2000;
+ obj.address = Address();
+}
+
+
+
+
+
+
+                 MULTI-LEVEL INHERITANCE  (using super keyword in it)
+
+class Person {
+  late String name;
+  late String gender;
+  late String dob;
+
+  Person({
+    required this.name,
+    required this.gender,
+    required this.dob,
+  });
+
+  void printPerson() {
+    print('Name : $name');
+    print('Gender : $gender');
+    print('Date Of Birth : $dob');
+  }
+}
+
+class Student extends Person {
+  late String course;
+  late String mobile;
+
+  Student({
+    required String name,
+    required String gender,
+    required String dob,
+    required this.course,
+    required this.mobile,
+  }) : super(name: name, gender: gender, dob: dob);
+
+ void printStudent(){
+    print('Course is : $course');
+    print('Mobile No : $mobile');
+  }
+ 
+}
+
+void main() {
+  Student h = Student(
+      name: 'hamza',
+      gender: 'M',
+      dob: '21 Nov',
+      course: 'Flutter',
+      mobile: '03149498554');
+
+     h.printPerson();
+     h.printStudent();
+}
+
+
+

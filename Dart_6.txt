@@ -1,0 +1,68 @@
+
+              Guess Game Program
+
+
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  Random randomNum = Random();
+  int r = randomNum.nextInt(100);
+
+  print(
+      'Hi Nigga A Numbers Has been Generated From 1 to 100, Check Your Guesses');
+  int userGuess;
+  while (true) {
+    stdout.write('Enter Your Guess : ');
+    userGuess = int.parse(stdin.readLineSync()!);
+
+    if (userGuess > r) {
+      print('Your Guess is High Nigga, Use Your Brain ');
+    }
+    else if (userGuess < r) {
+      print('Your Guess Is Low , Sorry Try Again');
+    }
+    else {
+      print('Congratulations Your Guess is correct');
+    }
+  }
+}
+
+
+
+                 Rolling Dice Program 
+
+
+
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  Random randomNum = Random();
+
+  List<int> diceRolls = [];
+
+  int one , two , three , four , five , six;
+
+  one = two = three = four = five = six = 0;
+
+  for (var i = 1; i<= 12000; i++)
+    {
+      int r = randomNum.nextInt(6);
+      diceRolls.add(r);
+
+      if(  r == 1) one++;
+      if(  r == 2) two++;
+      if(  r == 3) three++;
+      if(  r == 4) four++;
+      if(  r == 5) five++;
+      if(  r == 6) six++;
+    }
+
+    print('1 Appeared $one Times :');
+    print('2 Appeared $two Times :');
+    print('3 Appeared $three Times :');
+    print('4 Appeared $four Times :');
+    print('5 Appeared $five Times :');
+    print('6 Appeared $six Times :');
+  }

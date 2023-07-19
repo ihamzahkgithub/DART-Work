@@ -1,0 +1,301 @@
+
+                             DIFF TYPES OF DATATYPES
+ //import 'dart:io';
+void main() {
+
+  /*
+   Different
+   types of
+   DataTypes
+   */
+ /* int totalstudents;
+  totalstudents=100;
+  double gpa= 3.2;
+  bool isMarried= false;
+  String address= 'Umarzai Charsadda';
+  
+  print('DETAIL OF DIFFERENT STUDENTS');
+  
+  print(' Number of Students are: $totalstudents');
+  print('GPA is : $gpa');
+  print('Student is Married/UnMarried: $isMarried');
+  print('Address is : $address');
+  */
+  
+  var age=22;
+  print(age.runtimeType);
+}
+
+
+
+
+                                       //Hard Coded Values in Detailed Marks Certificate
+
+
+
+import 'package:pracc/pracc.dart' as pracc;
+
+void main() {
+  print('Details Marks Certificate');
+
+  double isl, urdu, maths, sci, english, obtMarks, percentage;
+  const totalMarks = 450;
+  isl= 45;
+  urdu= 85;
+  maths= 100;
+  sci= 90;
+  english= 70;
+
+  print('Islamiyat Marks = $isl');
+  print('Urdu Marks = $urdu');
+  print('Maths Marks = $maths');
+  print('Science Marks = $sci');
+  print('English Marks = $english');
+
+  obtMarks = isl + urdu + maths + sci + english;
+  print('Obtained Marks are = $obtMarks');
+
+  percentage = obtMarks *100/totalMarks;
+  print('Percentage is = $percentage');
+
+}
+
+import 'package:pracc/pracc.dart' as pracc;
+
+                         
+                           
+                                   NULLABLE DATATYPES
+*/
+nullable 
+datatype 
+put (?) sign of interrogation before the datatype and never declare that datatype
+so it will be null
+/*
+
+void main() {
+    String name, fatherName, address;
+    name= 'Hamza Hamid Khan';
+    fatherName = 'Hamid Jan';
+    address = 'Charsadda';
+    String? girlfriend;
+    print('My Name is $name');
+    print('My Father Name is $fatherName');
+    print('My Address is $address');
+     if(girlfriend== null){
+       print('Looking for a beautiful GF');
+     }
+    else{
+      print('Going to die Single');
+     }
+
+}
+
+                                 Escapes Sequences in String (Single Quotes And Double Quotes)
+
+
+import 'package:pracc/pracc.dart' as pracc;
+
+void main() {
+   //String city= "'Charsadda'";
+   //print(city);
+
+
+   //String city= '"Charsadda"';
+   //print(city);
+
+ //mostly used in Sql
+  String city=
+  '''Charsadda
+  umarzai
+  hajiabad
+  ''';
+  print(city);
+  
+}
+
+                                       Type Conversion 
+
+
+import 'package:pracc/pracc.dart' as pracc;
+
+void main() {
+
+   String n1 = '12';
+   String n2 = '38';
+
+   int num1 = int.parse(n1);
+   int num2 = int.parse(n2);
+
+    print(num1 + num2);
+    
+}
+
+
+                                       INPUT OUTPUT IN DART
+
+
+
+import 'package:pracc/pracc.dart' as pracc;
+import 'dart:io';
+void main() {
+
+   String name, lastname, phoneNum;
+
+   stdout.write('Enter Your First Name :');
+   name = stdin.readLineSync()!;
+
+   print('welcome : $name');
+
+   stdout.write('Enter your last name please ');
+   lastname = stdin.readLineSync()!;
+   print('Thanks you so Much : $lastname');
+
+   stdout.write('Enter your Number');
+   phoneNum = stdin.readLineSync()!;
+
+   print(phoneNum);
+   print('thanks you for nothing');
+
+}
+
+                                       SIMPLE CALCULATOR
+ 
+
+
+ int num1, num2, result;
+
+  stdout.write('Enter Your First Number');
+  num1 = int.parse(stdin.readLineSync()!);
+
+  print(num1);
+
+  stdout.write('Enter Your Second Number :');
+  num2 = int.parse(stdin.readLineSync()!);
+  print(num2);
+
+  result = num1 + num2;
+  print('The Sum is : $result');
+
+
+  result = num1 - num2;
+  print('The Substraction  is : $result');
+
+
+  result = num1 ~/ num2;
+  print('The Div is : $result');
+
+
+  result = num1 % num2;
+  print('The Mod is : $result');
+
+
+
+                               CONVERTING RUPEES TO DOLLARS
+ 
+
+import 'dart:collection';
+
+import 'package:pracc/pracc.dart' as pracc;
+import 'dart:io';
+void main() {
+
+  double dollars, rate, rupees;
+
+  stdout.write('ENTER DOLLARS : ');
+  dollars = double.parse(stdin.readLineSync()!);
+  print(dollars);
+
+  stdout.write('Enter Today Rate :');
+  rate = double.parse(stdin.readLineSync()!);
+
+  rupees = dollars * rate;
+  print('RUPEES ARE : $rupees');
+
+}
+
+                          SWAPPING
+
+
+import 'dart:io';
+void main() {
+
+  int a , b , temp;
+
+  stdout.write('Enter First Number :');
+  a= int.parse(stdin.readLineSync()!);
+
+  stdout.write('Enter Second Number :');
+  b= int.parse(stdin.readLineSync()!);
+
+  print('Original Values are');
+  print('a=$a, b= $b');
+
+  temp = a;
+  a=b;
+  b= temp;
+  print('values before swapping are');
+  print('a=$a, b= $b');
+
+
+}
+
+
+                                      DECISION MAKING INSTRUCTION
+
+ 
+
+import 'dart:collection';
+
+import 'package:pracc/pracc.dart' as pracc;
+import 'dart:io';
+
+//import 'package:test/test.dart';
+void main()
+{
+
+  int age;
+  stdout.write('ENTER YOUR AGE :');
+  age = int.parse(stdin.readLineSync()!);
+
+  if( age >= 18)
+    {
+      print('You Are eligible For CNIC');
+    }
+  else
+  {
+    print('You are not Eligible ');
+
+  }
+
+  print('The End Thanks You So Much');
+
+}
+
+                            ODD EVEN PROGRAM
+
+
+import 'dart:collection';
+
+import 'package:pracc/pracc.dart' as pracc;
+import 'dart:io';
+
+//import 'package:test/test.dart';
+void main()
+{
+
+
+
+  int num;
+  stdout.write('ENTER YOUR NUMBER PLEASE :');
+  num = int.parse(stdin.readLineSync()!);
+
+  if( num%2==0)
+    {
+      print('The Number is even');
+    }
+  else
+    {
+      print('The Number is Odd');
+    }
+
+}

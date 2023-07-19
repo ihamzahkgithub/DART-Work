@@ -1,0 +1,121 @@
+                   FUNCTIONS IN DART
+
+import 'dart:io';
+
+void myFunction()
+{
+  print('**********');
+}
+void main()
+{
+
+  print('main stars');
+  myFunction();
+}
+
+
+
+                POSITIONAL ARGUMENTS
+
+void area(int width, int length)
+{
+  print('Area = ${width * length}');
+}
+void main()
+{
+  area(7, 8); //POSITIONAL ARGUMENTS
+}
+
+NAMED ARGUMNENTS
+
+
+void area( required int width, required int length)
+{
+  print('Area = ${width * length}');
+}
+void main()
+{
+  area(width, length);
+}
+
+
+
+    PROGRAM 
+
+void power(int base , int exponent){
+  int result= base;
+  for (int i = 1; i<= exponent; i++){
+    result = result * base;
+  }
+  print('Result : $result');
+}
+
+void main()
+{
+ power(2, 7);
+}
+
+
+
+                           RETURN TYPE 
+
+PROGRAM FOR LARGEST NUMBER 
+
+
+
+int max(int x , int y){
+
+  return(x>y)? x : y;
+
+}
+void main(){
+  int x, y , z;
+  x = 10;
+  y = 3;
+  z = 5;
+  print(max(max(x, y), z));
+}
+
+
+
+                FACTORIAL
+
+
+int factorial(int num)
+{
+  int fact = 1;
+  for(var i = 2; i<=num; i++)
+  {
+   fact *= i;
+  }
+  return fact;
+}
+
+void main()
+{
+  print(factorial(3));
+}
+
+
+
+
+Modified//
+
+
+int factorial(int num)
+{
+  int fact = 1;
+  for(var i = 2; i<=num; i++)
+  {
+   fact *= i;
+  }
+  return fact;
+}
+
+void main()
+{
+  for( var i= 1; i<= 10; i++){
+    print('$i! = ${factorial(i)}');
+  }
+}
+

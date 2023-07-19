@@ -1,0 +1,95 @@
+
+
+            OVERRIDING
+over riding d para shirt da d che parent class aw child class method ba same name V 
+
+class Person {
+  late String name;
+  late String gender;
+  late String dob;
+
+  Person({
+    required this.name,
+    required this.gender,
+    required this.dob,
+  });
+
+  void printPerson() {
+    print('Name : $name');
+    print('Gender : $gender');
+    print('Date Of Birth : $dob');
+  }
+}
+
+class Student extends Person {
+  late String course;
+  late String mobile;
+
+  Student({
+    required String name,
+    required String gender,
+    required String dob,
+    required this.course,
+    required this.mobile,
+  }) : super(name: name, gender: gender, dob: dob);
+
+  // Same method name must be in parent and child class 
+  @override
+  void printPerson() {
+    print('Course is : $course');
+    print('Mobile No : $mobile');
+    super.printPerson();
+  }
+}
+
+void main() {
+  Student h = Student(
+      name: 'hamza',
+      gender: 'M',
+      dob: '21 Nov',
+      course: 'Flutter',
+      mobile: '03149498554');
+
+  h.printPerson();
+  h.printPerson();
+}
+
+
+
+
+    EXCEPTION AND EXCEPTION HANDLING 
+
+EXCEPTIION :
+Exception are the run time errors
+
+EXCEPTION HANDLING :
+Exception Handling is solving the problems is called exception handling.
+
+
+
+
+import 'dart:io';
+
+void main (){
+
+  int num1,num2, quo;
+ try{
+   stdout.write('ENTER YOUR FIRST NUMBER :');
+   num1 = int.parse(stdin.readLineSync()!);
+   stdout.write('ENTER YOUR SECOND NUMBER  :');
+   num2 = int.parse(stdin.readLineSync()!);
+
+   quo = num1 ~/ num2;
+
+   print('QUOTIONT IS : $quo');
+ }
+
+ catch (e){
+   print('THIS IS');
+   print(e);
+ }
+
+
+}
+
+

@@ -1,0 +1,62 @@
+             Ascending Descending Program
+       
+void main()
+{
+  int i, j;
+  j=11;
+
+  for(int i=1; i<=11; i++, j-- )
+  {
+    print('$i $j');
+  }
+
+
+}
+
+
+             SIMPLE CLOCK USING NESTED LOOP
+
+import 'dart:collection';
+
+import 'package:pracc/pracc.dart' as pracc;
+import 'dart:io';
+
+import 'package:test/test.dart';
+
+//import 'package:test/test.dart';
+void main() async{
+  int hour, minutes, seconds;
+
+  print('Hrs::Min::Sec');
+  for(hour=1; hour<=24; hour++)
+    {
+      for(minutes=1; minutes<=60; minutes++)
+        {
+          for( seconds=1; seconds<=60; seconds++)
+            {
+              print('$hour :: $minutes :: $seconds');
+              await Future.delayed(Duration(seconds: 1));
+            }
+
+        }
+    }
+}
+
+
+                    PATTERNS
+
+
+import 'dart:io';
+
+void main() {
+  int i, j;
+  for (int i = 1; i <= 5; i++) {
+
+    for(j=1; j<=i; j++)
+      {
+        stdout.write('*');
+      }
+    print('');
+}
+
+}

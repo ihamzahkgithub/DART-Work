@@ -1,0 +1,86 @@
+                      LIST CONCEPT
+
+
+import 'dart:io';
+
+void main() {
+  List<String> shoppingList = [];
+  shoppingList.add('Shoes');
+  shoppingList.add('Clothes');
+  shoppingList.add('Jewelery');
+  shoppingList.add('Foods');
+  shoppingList.add('Vegetables');
+  shoppingList.add('Dry Fruits');
+
+  for(var i=0; i<shoppingList.length; i++)
+    {
+      print(shoppingList[i]);
+
+    }
+
+}
+
+
+            LIST OPERATION
+
+     gpas.add();
+  gpas.insert(index, element);
+  gpas.removeAt(index);
+
+import 'dart:io';
+
+void main() {
+  List <double> gpas = [3.2, 2.9, 1.9]; // declaration/initialization
+
+  //List Operations
+  gpas.add(2.1);
+  gpas.add(2.3);
+  gpas.insert(1, 3.9);
+  gpas.removeAt(2);
+
+
+
+  for(var gpa in gpas){
+    print(gpa);
+  }
+}
+
+
+                MAP CONCEPT (important)
+
+Map works on key value pairs and ends with a curly brackets 
+in this program the string datatype is key and the double is value
+
+
+import 'dart:io';
+
+void main() {
+         Map<String, double> playersJersey ={};
+         playersJersey['Hamza'] = 99;
+         playersJersey['Sabir'] = 11;
+         playersJersey['Abdullah'] = 18;
+         playersJersey['Dadu'] = 81;
+
+         print(playersJersey['Dadu']);
+         print(playersJersey['Abdullah']);
+         
+}
+
+
+                        Dynamic Value in Map
+
+' ' : ,
+
+void main(){
+
+  Map<String, dynamic> playersJersey ={
+    'Afridi': 10,
+  'Babar': 9,
+  'Shaheen': 1,
+    'isMarried': false,
+  };
+
+  print(playersJersey['Babar']);
+  print(playersJersey['Shaheen']);
+  print(playersJersey['isMarried']);
+}

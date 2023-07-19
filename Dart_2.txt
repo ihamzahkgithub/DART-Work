@@ -1,0 +1,111 @@
+
+
+                                     IMP CONCEPT
+import 'dart:collection';
+
+import 'package:pracc/pracc.dart' as pracc;
+import 'dart:io';
+
+import 'package:test/test.dart';
+
+//import 'package:test/test.dart';
+void main()
+{
+  int num1, num2, choice;
+  stdout.write('Enter Your Firt Number = ');
+  num1 = int.parse(stdin.readLineSync()!);
+
+  stdout.write('Enter Your Second Number = ');
+  num2 = int.parse(stdin.readLineSync()!);
+
+  String message = '''
+  Which Operation Do You Want To Perform
+  
+  1.Add
+  2.Sub
+  3.Div
+  4.Mod
+  
+  Yours Choice? ... ''';
+
+  stdout.write(message);
+  choice =int.parse(stdin.readLineSync()!);
+
+  if(choice==1)
+    {
+      print('Sum is = ${num1+num2}');
+    }
+  if(choice==2)
+  {
+    print('Substraction is = ${num1-num2}');
+  }
+  if(choice==3)
+  {
+    print('Division is = ${num1/num2}');
+  }
+  if(choice==4)
+  {
+    print('Modulus is = ${num1%num2}');
+  }
+  if(choice>4)
+  {
+    print('Enter a Valid Number Lattttto');
+  }
+
+
+
+}
+
+
+                        Creating ANY TABLE
+
+import 'dart:io';
+
+import 'package:test/test.dart';
+
+//import 'package:test/test.dart';
+void main()
+{
+  int num, i;
+  stdout.write('Enter Any Number  =');
+  num =int.parse(stdin.readLineSync()!);
+
+  for(int i=1; i<11; i++)
+    {
+      print('$num X $i = ${num * i}');
+    }
+
+
+
+
+                        WHILE LOOP IMPORTANT CONCEPTS
+
+import 'dart:collection';
+
+import 'package:pracc/pracc.dart' as pracc;
+import 'dart:io';
+
+import 'package:test/test.dart';
+
+//import 'package:test/test.dart';
+void main()
+{
+  int num1, num2;
+      String choice = 'yes';
+  while(choice == 'yes') {
+    stdout.write('Enter first no =');
+    num1 = int.parse(stdin.readLineSync()!);
+    stdout.write('Enter Second No');
+    num2 = int.parse(stdin.readLineSync()!);
+
+    print('Sum = ${num1 + num2}');
+
+    stdout.write('Do you want to perform More Operations(yes/no)?');
+    choice = stdin.readLineSync()!;
+
+  }
+
+  print('Thanks You So Much');
+
+
+}
